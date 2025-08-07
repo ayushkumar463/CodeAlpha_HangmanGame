@@ -1,20 +1,20 @@
 import random
 import hangman_stages
 import words
-listt = choices = ['apple', 'banana', 'mango', 'orange', 'papaya', 'pomegranate', 'guava', 'watermelon']
-# choice=random.choice(words.fruits + words.general +words.lst +words.places + words.technology)
-choice = random.choice(listt)
 
+choice=random.choice(words.fruits + words.general +words.lst +words.places + words.technology)
 choices =[]
 tries=7
 display = list('_'*len(choice))
+
+
 print("===================================")
 print("🎉 Welcome to the Hangman Game! 🎉")
 print("===================================")
 print("Rules:")
 print("- A secret word will be selected.")
 print("- You have to guess one letter at a time.")
-print("- You are allowed only 6 wrong attempts.")
+print("- You are allowed only 7 wrong attempts.")
 print("- Each wrong guess brings the hangman closer to danger!")
 print("- You win if you guess the word before all 6 chances are used.")
 print("Let's begin! Good luck!\n")
@@ -42,4 +42,5 @@ while '_'  in display and tries>0:
 if '_'not in display:
     print("you won the match. your word was : ",choice)
 else:
+
     print("you loose the match. Your word was : ",choice)
